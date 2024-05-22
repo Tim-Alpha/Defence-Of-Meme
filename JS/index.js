@@ -38,7 +38,7 @@ const image = new Image()
 image.onload = () => {
     animate()
 }
-image.src = 'IMG/GameMap.png'
+image.src = 'https://github.com/Tim-Alpha/Defence-Of-Meme/blob/main/IMG/GameMap.png/GameMap.png'
 
 const enemies = []
 
