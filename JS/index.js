@@ -43,23 +43,20 @@ image.src = 'IMG/GameMap.png'
 const enemies = []
 
 function spawnEnemies(spawnCount) {
-    for (let i = 1; i <= spawnCount; i++) {
-        const xOffset = i * 150;
-        const baseHealth = 100; // Base health of an enemy
-        const additionalHealth = 10 * currentRound; // Increase health each round
-        enemies.push(new Enemy({
-            position: { x: waypoints[0].x - xOffset, y: waypoints[0].y },
-            health: baseHealth + additionalHealth // Set health based on the round
-        }));
+    for (let i = 1; i < spawnCount + 1; i++) {
+        const xOffset = i * 150
+        enemies.push(
+            new Enemy({
+                position: { x: waypoints[0].x - xOffset, y: waypoints[0].y }
+            })
+        )
     }
 }
-
 
 const buildings = []
 let activeTile = undefined
 let enemyCount = 3
 let hearts = 10
-let currentRound = 0;
 let coins = 125
 let shootingAudio = new Audio('AUDIO/gun_fire.mp3');
 let gameOverAudio = new Audio('AUDIO/game_over.mp3');
@@ -69,7 +66,6 @@ let lovelyBgM = new Audio('AUDIO/lovelyBgM.mp3');
 let defaultBgM = new Audio('AUDIO/lovelyBgM.mp3');
 
 document.getElementById('coins').innerText = coins;
-
 spawnEnemies(enemyCount)
 
 function animate() {
