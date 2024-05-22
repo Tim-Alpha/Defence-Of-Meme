@@ -1,0 +1,124 @@
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Changa+One&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+<style>
+    body {
+        background-color: black;
+        margin: 0px;
+    }
+
+    .parentCanvas {
+        position: relative;
+        display: inline-block;
+    }
+
+    .btn {
+        background: #3498db;
+        background-image: -webkit-linear-gradient(top, #3498db, #2980b9);
+        background-image: -moz-linear-gradient(top, #3498db, #2980b9);
+        background-image: -ms-linear-gradient(top, #3498db, #2980b9);
+        background-image: -o-linear-gradient(top, #3498db, #2980b9);
+        background-image: linear-gradient(to bottom, #3498db, #2980b9);
+        -webkit-border-radius: 28;
+        -moz-border-radius: 28;
+        border-radius: 28px;
+        font-family: Arial;
+        color: #ffffff;
+        font-size: 20px;
+        padding: 10px 20px 10px 20px;
+        text-decoration: none;
+        }
+
+    .btn:hover {
+        background: #3cb0fd;
+        background-image: -webkit-linear-gradient(top, #3cb0fd, #3498db);
+        background-image: -moz-linear-gradient(top, #3cb0fd, #3498db);
+        background-image: -ms-linear-gradient(top, #3cb0fd, #3498db);
+        background-image: -o-linear-gradient(top, #3cb0fd, #3498db);
+        background-image: linear-gradient(to bottom, #3cb0fd, #3498db);
+        text-decoration: none;
+    }
+
+    .gameOver {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        display: none;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        color: white;
+        font-size: 120px;
+        font-weight: 700;
+        text-transform: uppercase;
+        -webkit-text-stroke: 3px red;
+    }
+
+    .health {
+        position: absolute;
+        top: 0px;
+        right: 0px;
+        color: white;
+        font-size: 35px;
+        font-weight: 700;
+        padding: 5px;
+        -webkit-text-stroke: 1px red;
+        display: flex;
+        align-items: center;
+        background: linear-gradient(to left bottom, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.1),rgba(0, 0, 0, 0));
+    } right 
+
+    .fa-heart {
+        width: 35px;
+        color: red;
+        margin-right: 5px;
+    }
+
+    .fa-coins {
+        width: 35px;
+        color: gold;
+        margin-right: 5px;
+    }
+
+    .coinHealth {
+        display: flex;
+        align-items: center;
+        margin-right: 20px;
+    }
+</style>
+
+<div class="parentCanvas">
+    <canvas></canvas>
+
+    <!-- Game Over-->
+    <div class="gameOver" id="GameOver">
+        <p>Game Over</p>
+        <br/>
+        <button id="retryButton" class="btn" type="button">RETRY AGAIN</button>
+    </div>
+
+    <div class="health">
+
+        <!-- coins -->
+        <div class="coinHealth">
+            <i class="fa-solid fa-coins"></i>
+            <div id="coins"></div>
+        </div>
+
+        <!-- health -->
+        <div class="coinHealth">
+            <i class="fa-solid fa-heart"></i>
+            <div id="heart">10</div>
+        </div>
+
+    </div>
+</div>
+</div>
+
+<script src="JS/placmentTilesData.js"></script>
+<script src="JS/waypoints.js"></script>
+<script src="JS/classes.js"></script>
+<script src="JS/index.js"></script>
