@@ -42,7 +42,7 @@ class Enemy {
             y: 0
         }
         this.image = new Image()
-        this.image.src = 'https://github.com/Tim-Alpha/Defence-Of-Meme/blob/main/IMG/pepe-run.gif'
+        this.image.src = 'IMG/pepe-run.gif'
     }
 
     draw() {
@@ -144,7 +144,7 @@ class Building {
         this.target
         this.frames = 0
         this.image = new Image()
-        this.image.src = 'https://github.com/Tim-Alpha/Defence-Of-Meme/blob/main/IMG/cat.png'
+        this.image.src = 'IMG/cat.png'
     }
 
     draw() {
